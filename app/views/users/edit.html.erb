@@ -1,0 +1,48 @@
+<body>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<h1><font color="black">Profile</h1>      
+      <%= form_for(@user) do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name, :placeholder => "Enter Username" %>
+          
+          <%= f.label :email%>
+          <%= f.email_field :email, :placeholder => "Enter Email Id" %>
+          
+          <%= f.label :password%>
+          <%= f.password_field :password, :placeholder => "Enter Password" %>
+          
+          <%= f.label :password_confirmation%>
+          <%= f.password_field :password_confirmation, :placeholder => "Re-type Password" %>
+          
+          <%= f.label :latitude %>
+          <%= f.text_field :latitude, :placeholder => "Enter Latitude"%>
+      
+          <%= f.label :longitude %>
+          <%= f.text_field :longitude, :placeholder => "Enter Longitude"%>
+          
+          
+         
+
+          
+          <%= f.submit "Save Changes", class: "btn btn-primary" %>
+      <% end %>      
+      
+  </div>
+  <% if @user.errors.any? %>
+	<ul class="Signup_Errors">
+		<% for message_error in @user.errors.full_messages %>
+			<li>* <%= message_error %></li>
+	  	<% end %>
+	</ul>
+  <% end %>
+  
+</div>
+<style type="text/css">
+body {
+    background-image:
+        url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+</body>

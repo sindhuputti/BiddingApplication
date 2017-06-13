@@ -1,0 +1,63 @@
+<html>
+<head>
+<style type="text/css">
+body {
+    background-image:
+        url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+
+<script type="text/javascript">
+        $(function() {
+
+            Timers.init();
+
+        });
+    </script>
+
+</head>
+<body>
+  
+<h1>Purchase products here</h1>
+
+<br>
+
+<%= will_paginate %>
+
+
+      
+      <ul class="items">
+  <table class="table table-bordered">
+        <h2 >
+        <tr>
+          <th width="70">Name</th>
+          <th width="60">Current Bidding Price</th>
+          <th width="115">Last Bidder Email</th>
+        </tr> 
+   <% @items.each do |item| %>
+  <% if item.email != @user.email %>
+  <table class="table table-bordered">
+        <tr>
+          <td width="100">  <%= link_to item.productname, item %></td>
+          <td width="100"> <%= item.cbiddingprice %> </td>
+          <td width="100">   <%= item.lbidderemail %>  </td>
+        </tr>    
+ </table>
+
+      
+   <% end %>
+
+
+
+
+<p>
+  <div data-countdown-until="<%= 10.days.from_now %>"></div>
+</p>
+
+    </h2>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+</body>
+</html>

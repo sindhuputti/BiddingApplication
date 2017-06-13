@@ -1,0 +1,17 @@
+<h1>User Login Page</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url:login_path) do |f| %>
+        
+        <%= f.label :email %>
+        <%= f.email_field :email, :placeholder => "Enter Email Id" %>
+        
+        <%= f.label :password %>
+        <%= f.password_field :password, :placeholder => "Enter Password" %>
+        
+        <%= f.submit "Login", class: "btn btn-primary"  %>
+      <% end %>    
+      <p>Don't have an Account!<%= link_to " SignUp" , signup_path %>    </p>
+  </div>
+</div>

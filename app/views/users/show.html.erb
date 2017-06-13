@@ -1,0 +1,41 @@
+
+<body>
+<br>
+<h1>Welcome <%= @user.name %></h1>
+<center>
+    <div >
+       <p>
+  <strong>Username:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @user.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @user.longitude %>
+
+      <p><%= link_to " Show Products" , items_myproducts_path %>    </p>
+  
+
+
+    </div>
+        
+</center>
+</body>
+<style type="text/css">
+body {
+    background-image:
+        url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+

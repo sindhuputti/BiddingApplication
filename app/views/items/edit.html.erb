@@ -1,0 +1,24 @@
+<body >
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<h1><font color="black">Enter Bidding Value</h1>      
+      <%= form_for(@item) do |f| %>
+          <p>Enter your Bid value </p>
+          <%= f.text_field :dprice, :placeholder => "Enter your bid price" %>
+          
+          <%= f.submit "Submit", class: "btn btn-primary" %>
+      <% end %>      
+      
+  </div>
+
+
+</div>
+<style type="text/css">
+body {
+    background-image:
+        url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+</body>
+

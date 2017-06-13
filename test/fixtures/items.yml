@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  productname: MyString
+  email: MyString
+  baseprice: 1.5
+  cdays: 1
+  chours: 1
+  cminutes: 1
+  category: MyString
+
+two:
+  productname: MyString
+  email: MyString
+  baseprice: 1.5
+  cdays: 1
+  chours: 1
+  cminutes: 1
+  category: MyString

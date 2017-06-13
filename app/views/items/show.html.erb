@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<body>
+<br>
+<h1>Details of <%= @item.productname %> you choose to bid</h1>
+<center>
+    <div >
+       <p>
+  <strong>Product name:</strong>
+  <%= @item.productname %>
+</p>
+
+<p>
+  <strong>Seller Email:</strong>
+  <%= @item.email %>
+</p>
+
+
+<p>
+  <strong>Base Price:</strong>
+  <%= @item.baseprice %>
+</p>
+<p>
+  <strong>Current Bidding Price:</strong>
+  <%= @item.cbiddingprice %>
+  <%= @item.cprice %>
+  <p><b>Advertisement Posted Time:</b><%= @item.created_at.to_s(:db); %> </p>
+  <p><b>Bidding Ends in:</b><%=   (@item.timediff/(365.25*24)).round(2) %> </p>
+  <p>Want to bid<%= link_to "Click Here" , edit_item_path %>    </p>
+
+    </div>
+
+        
+</center>
+</body>
+
+ 
+<style type="text/css">
+body {
+    background-image:
+        url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+ 
+    <br>
+    <br>
+    <div id="show" align="center"></div>
+ 
+    <div align="center">
+       
+    </div>
+</BODY>
+  <div id="footer">
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    $(document).ready(
+            function() {
+                setInterval(function() {
+                  var d = new Date
+                
+                    $('#show').text(d);
+                }, 1000);
+            });
+</script>
+</div>
+</HTML>
